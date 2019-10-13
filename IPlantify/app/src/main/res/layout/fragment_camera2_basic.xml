@@ -42,6 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
             android:fontFamily="casual"
             android:textColor="#FFF"
             android:textSize="25sp" />
