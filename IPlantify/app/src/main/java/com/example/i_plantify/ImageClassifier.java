@@ -217,7 +217,10 @@ public class ImageClassifier {
     final int size = sortedLabels.size();
     for (int i = 0; i < size; ++i) {
       Map.Entry<String, Float> label = sortedLabels.poll();
-      textToShow = String.format("%s",label.getKey()) + '\n' + textToShow;
+      if(label.getValue() >= 0.70)
+        textToShow = String.format("%s",label.getKey());
+      else
+        textToShow = "";
     }
     return textToShow;
   }
