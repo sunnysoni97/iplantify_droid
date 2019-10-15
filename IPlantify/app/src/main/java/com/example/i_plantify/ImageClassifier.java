@@ -45,21 +45,21 @@ public class ImageClassifier {
   private static final String TAG = "TfLiteCameraDemo";
 
   /** Name of the model file stored in Assets. */
-  private static final String MODEL_PATH = "graph.lite";
+  private static final String MODEL_PATH = "converted_model.tflite";
 
   /** Name of the label file stored in Assets. */
-  private static final String LABEL_PATH = "labels.txt";
+  private static final String LABEL_PATH = "retrained_labels.txt";
 
   /** Number of results to show in the UI. */
-  private static final int RESULTS_TO_SHOW = 2;
+  private static final int RESULTS_TO_SHOW = 1;
 
   /** Dimensions of inputs. */
   private static final int DIM_BATCH_SIZE = 1;
 
   private static final int DIM_PIXEL_SIZE = 3;
 
-  static final int DIM_IMG_SIZE_X = 224;
-  static final int DIM_IMG_SIZE_Y = 224;
+  static final int DIM_IMG_SIZE_X = 299;
+  static final int DIM_IMG_SIZE_Y = 299;
 
   private static final int IMAGE_MEAN = 128;
   private static final float IMAGE_STD = 128.0f;
@@ -100,7 +100,7 @@ public class ImageClassifier {
     labelList = loadLabelList(activity);
     imgData =
         ByteBuffer.allocateDirect(
-            4 * DIM_BATCH_SIZE * DIM_IMG_SIZE_X * DIM_IMG_SIZE_Y * DIM_PIXEL_SIZE);
+            4*DIM_BATCH_SIZE * DIM_IMG_SIZE_X * DIM_IMG_SIZE_Y * DIM_PIXEL_SIZE);
     imgData.order(ByteOrder.nativeOrder());
     labelProbArray = new float[1][labelList.size()];
     filterLabelProbArray = new float[FILTER_STAGES][labelList.size()];
@@ -217,7 +217,10 @@ public class ImageClassifier {
     final int size = sortedLabels.size();
     for (int i = 0; i < size; ++i) {
       Map.Entry<String, Float> label = sortedLabels.poll();
-      textToShow = String.format("\n<<<Name : {%s} Probability : {%4.2f}>>>",label.getKey(),label.getValue()) + '\n' + textToShow;
+      if(label.getValue() >= 0.20)
+        textToShow = String.format("%s",label.getKey());
+      else
+        textToShow = "";
     }
     return textToShow;
   }

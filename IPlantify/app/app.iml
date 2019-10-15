@@ -118,6 +118,6 @@
     <orderEntry type="library" name="Gradle: com.android.support:support-core-ui:25.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-compat:25.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout:1.1.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: org.tensorflow:tensorflow-lite:1.14.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.tensorflow:tensorflow-lite:2.0.0@aar" level="project" />
   </component>
 </module>

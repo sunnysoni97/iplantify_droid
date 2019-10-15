@@ -20,8 +20,10 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -203,6 +205,18 @@ public class Camera2BasicFragment extends Fragment
    *
    * @param text The message to show
    */
+
+  private void do_search()
+  {
+    String query = textView.getText().toString();
+    Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+    intent.putExtra(SearchManager.QUERY, query);
+    //if (intent.resolveActivity(Activity::getPackageManager()) != null) {
+    startActivity(intent);
+    //}
+  }
+
+
   private void showToast(final String text) {
     final Activity activity = getActivity();
     if (activity != null) {
@@ -290,6 +304,12 @@ public class Camera2BasicFragment extends Fragment
   public void onViewCreated(final View view, Bundle savedInstanceState) {
     textureView = (AutoFitTextureView) view.findViewById(R.id.texture);
     textView = (TextView) view.findViewById(R.id.text);
+    textView.setOnClickListener(new View.OnClickListener(){
+      @Override
+      public void onClick(View v) {
+        do_search();
+      }
+    });
   }
 
   /** Load the model and labels. */

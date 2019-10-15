@@ -21,26 +21,34 @@
         android:id="@+id/texture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
 
     <FrameLayout
         android:id="@+id/control"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/texture"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:background="@color/control_background">
+        android:background="@drawable/round_bg"
+        android:orientation="vertical">
+
 
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
             android:fontFamily="casual"
-            android:paddingLeft="5dp"
-            android:paddingTop="2dp"
             android:textColor="#FFF"
-            android:textSize="17sp" />
+            android:textSize="25sp" />
+
 
     </FrameLayout>
 

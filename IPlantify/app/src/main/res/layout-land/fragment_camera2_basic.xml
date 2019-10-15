@@ -28,23 +28,24 @@
     <FrameLayout
         android:id="@+id/control"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@id/texture"
-        android:background="@color/control_background"
+        android:layout_toEndOf="@id/texture"
+        android:background="@drawable/round_bg"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="casual"
-            android:paddingLeft="2dp"
-            android:paddingTop="5dp"
             android:textColor="#FFF"
-            android:textSize="17sp" />
+            android:textSize="25sp" />
 
 
     </FrameLayout>

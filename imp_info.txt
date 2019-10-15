@@ -1,0 +1,8 @@
+retrain script call : 
+
+python3 retrain.py --bottleneck_dir=/home/sunnysoni/Desktop/iplantify_droid/data_training/bottlenecks --output_graph=/home/sunnysoni/Desktop/iplantify_droid/data_training/retrained_graph.pb --output_labels=/home/sunnysoni/Desktop/iplantify_droid/data_training/retrained_labels.txt --image_dir /home/sunnysoni/Desktop/iplantify_droid/data_training --tfhub_module https://tfhub.dev/google/inaturalist/inception_v3/feature_vector/3 --saved_model_dir /home/sunnysoni/Desktop/iplantify_droid/data_training/exported_model
+
+feature vector :
+
+https://tfhub.dev/google/inaturalist/inception_v3/feature_vector/3
+
