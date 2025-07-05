@@ -1,60 +1,58 @@
-
 ---
-
 #### This is the reader's manual for using and editing this software project as you may like!
-
----  
+---
 
 <br/>
 
-# About the Project  
+# About the Project
 
 ## I-Plantify
 
-**Your Personal Plant Encylopedia**  
+**Your Personal Plant Encylopedia**
 
 Made possible using TensorFlow Lite (tm) and Android platform, this is a mobile application based project that uses Image Classification using Neural Networks to classify different trees and flowers. The images are captured in realtime using the phone's hardware camera and the related information is displayed using Google's Web-Search API.
 
 Current database supports the following classes :
 
-- **Flowers** :
-   1. Sunflower
-   2. Daisy
-   3. Rose
-   4. Lily
-   5. Lotus
-   6. Jasmine
-   7. Iris
-   8. Dahlia
-   9. Daffodil
-   10. Lavender
-   11. Marigold
+-   **Flowers** :
 
-- **Trees** : 
-   1. Neem
-   2. Apple
-   3. Amla
-   4. Peepal
-   5. Banyan
-   6. Aloe vera
-   7. Cactus
-   8. Banana
-   9. Coconut
+    1. Sunflower
+    2. Daisy
+    3. Rose
+    4. Lily
+    5. Lotus
+    6. Jasmine
+    7. Iris
+    8. Dahlia
+    9. Daffodil
+    10. Lavender
+    11. Marigold
 
+-   **Trees** :
+    1. Neem
+    2. Apple
+    3. Amla
+    4. Peepal
+    5. Banyan
+    6. Aloe vera
+    7. Cactus
+    8. Banana
+    9. Coconut
 
 ---
 
 ## Prerequisites for developing this software :
 
-- **For Data Training Purpose** :
-   - Python 3.x environment should be setup
-   - Compatible Tensorflow installation with the required supporting libraries should be installed. GPU Version is recommend if you have a newer NVIDIA GPU that supports CUDA Toolkit.
-   - PIL Library for Dataset Creation Script
+-   **For Data Training Purpose** :
 
-- **For Android Application Development** :
-   - Android Studio should be setup with the compatible JDK Environment.
-   - A virtual Android Emulation device or an Android Phone for testing your builds (recommended due to dynamic nature of the application).
-   
+    -   Python 3.x environment should be setup
+    -   Compatible Tensorflow installation with the required supporting libraries should be installed. GPU Version is recommend if you have a newer NVIDIA GPU that supports CUDA Toolkit.
+    -   PIL Library for Dataset Creation Script
+
+-   **For Android Application Development** :
+    -   Android Studio should be setup with the compatible JDK Environment.
+    -   A virtual Android Emulation device or an Android Phone for testing your builds (recommended due to dynamic nature of the application).
+
 ---
 
 ## Installation Instructions for the End Users:
@@ -64,36 +62,25 @@ Current database supports the following classes :
 
 ---
 
-## Important Instructions for the Developers: 
+## Important Instructions for the Developers:
 
-- `retrain.py` is the file provided by Tensorflow Dev Team for performing Transfer Learning Based on your dataset. It can be invoked with the appropriate command line arguments to perform learning on your own dataset (images stored in folders [with the name of their class] in one parent folder containing all the class folders).
+-   `retrain.py` is the file provided by Tensorflow Dev Team for performing Transfer Learning Based on your dataset. It can be invoked with the appropriate command line arguments to perform learning on your own dataset (images stored in folders [with the name of their class] in one parent folder containing all the class folders).
 
-- `convert_lite.py` is used to convert the tensorflow graph to tensorflow lite equivalent model stored in the same folder as the script file.
+-   `convert_lite.py` is used to convert the tensorflow graph to tensorflow lite equivalent model stored in the same folder as the script file.
 
-- `rotate_img2.py` is used to produce 90 degree left and right rotated copies of the image files stored in the script directory using single invocation.
+-   `rotate_img2.py` is used to produce 90 degree left and right rotated copies of the image files stored in the script directory using single invocation.
 
-- **Inception v3 (iNaturalist Dataset)** image classification neural network has been used to train the currently used graph file. You can use different models to obtain personalised results.
+-   **Inception v3 (iNaturalist Dataset)** image classification neural network has been used to train the currently used graph file. You can use different models to obtain personalised results.
 
-- The Tensorflow Lite models and label file are stored in the **assets** folder and can be replaced by the developer with their own file.
+-   The Tensorflow Lite models and label file are stored in the **assets** folder and can be replaced by the developer with their own file.
 
-- Android image classifier can be modified to work according to the dev's requirements by modifying `ImageClassifier.java` file in the Android Application directory
+-   Android image classifier can be modified to work according to the dev's requirements by modifying `ImageClassifier.java` file in the Android Application directory
 
 ---
 
 ## Application Screenshots
 
-<p float="left">
-   <img src="https://github.com/sunnysoni97/sunnysoni97.github.io/blob/master/static/skills_applied/portfolio_screencaps/iplantify_screencaps/cap1.jpg?raw=true" alt="iplantify screenshot 1" width=300px />
-    &emsp;
-   <img src="https://github.com/sunnysoni97/sunnysoni97.github.io/blob/master/static/skills_applied/portfolio_screencaps/iplantify_screencaps/cap2.jpg?raw=true" alt="iplantify screenshot 2" width=300px />
-</p>
-<p float="left">
-
-   <img src="https://github.com/sunnysoni97/sunnysoni97.github.io/blob/master/static/skills_applied/portfolio_screencaps/iplantify_screencaps/cap3.jpg?raw=true" alt="iplantify screenshot 3" width=300px />
-    &emsp;
-   <img src="https://github.com/sunnysoni97/sunnysoni97.github.io/blob/master/static/skills_applied/portfolio_screencaps/iplantify_screencaps/cap4.jpg?raw=true" alt="iplantify screenshot 4" width=300px />
-
-</p>
+<img src="iplantify.png" alt="Iplantify Droid - Application Screenshots" style="max-width:1080px" width="100%">
 
 ---
 
@@ -101,6 +88,6 @@ Feel free to try out my project, make your own implementations, suggest changes 
 
 ---
 
-**P.S.** : *Hail the internet for all the awesome resources and information present on anything you want to learn. My whole hearted gratitude to everybody who made it possible for me to complete this project of mine.* :)
+**P.S.** : _Hail the internet for all the awesome resources and information present on anything you want to learn. My whole hearted gratitude to everybody who made it possible for me to complete this project of mine._ :)
 
 ---
